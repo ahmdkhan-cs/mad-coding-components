@@ -6,7 +6,7 @@ const getEmployees = async (req, res) => {
         const {limit, offset} = req.query;
 
         const [employees, count] = await Promise.all([
-            Employee.find().skip(offset).limit(limit),
+            Employee.find().sort({"_id": -1}).skip(offset).limit(limit),
             Employee.count()
         ]);
     

@@ -18,7 +18,7 @@ body{
 
 
 /* MAIN CONTAINER STYLES */
-.container{
+.container-file-uploader{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -120,7 +120,7 @@ body{
 
 /* MEDIA QUERIES */
 @media screen and (max-device-width: 640px) {
-    .container{
+    .container-file-uploader{
         width: 90%;
     }
 }

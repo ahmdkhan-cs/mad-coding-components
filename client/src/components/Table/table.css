@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root{
+    --primary-color: #614093;
+    --accent-color: #9BA4B5;
+    --white-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+
+}
+
+.container-table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    box-shadow: 0 0 10px var(--accent-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-responsive{
+    overflow: scroll;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr{
+    border-bottom: 1px solid var(--accent-color);
+}
+
+table th, td{
+    padding: 18px 24px;
+}
+
+table th{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+table tr td:first-child{
+    font-weight: 700;
+}
+
+table td{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    gap: 8px;
+}
+
+.page{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page:hover{
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    transition: all 0.3s;
+}
+
+.page-active{
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

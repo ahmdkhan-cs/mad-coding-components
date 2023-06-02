@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
-import "./style.css";
 import { useRef, useState } from 'react';
+import "./fileuploader.css";
 
 const FileUploader = () => {
     const fileRef = useRef(null);
@@ -93,7 +93,7 @@ const FileUploader = () => {
     }
 
     return (
-        <div className="container" >
+        <div className="container-file-uploader" >
             <div className="wrapper">
                 <div className="border" ref={containerRef} onClick={openFileDialog} onDragEnter={dragEnter} onDragOver={dragEnter} onDragLeave={dragLeave} onDrop={drop}>
                     <FontAwesomeIcon icon={faUpload} className='icon' />
