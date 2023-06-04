@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { useRef, useState } from 'react';
+import '../../index.css';
 import "./fileuploader.css";
 
 const FileUploader = () => {

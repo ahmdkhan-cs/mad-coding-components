@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faS, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react';
+import '../../index.css';
 import './table.css';
 
 const Table = () => {
@@ -8,7 +9,7 @@ const Table = () => {
     const [offset, setOffset] = useState(0);
     const [page, setPage] = useState(1);
     const [employees, setEmployees] = useState([]);
-    const [totalEmployees, setTotalEmployees] = useState(0);
+    const [totalPages, setTotalPages] = useState(0);
 
     useEffect(() => {
         changePage(page);
@@ -29,7 +30,11 @@ const Table = () => {
         const res = await fetch(url);
         await res.json().then((data) => {
             setEmployees(data.employees);
-            setTotalEmployees(data.count);
+            let tempPages = 0;
+            for(let i = 1; i <= data.count; i+=10){
+                tempPages++;
+            }
+            setTotalPages(tempPages);
         });
     }
 
@@ -94,7 +99,7 @@ const Table = () => {
 
             <div className="pagination">
                 {
-                    [...Array(parseInt(totalEmployees / limit)).keys()].map((key) => (
+                    [...Array(totalPages).fill(0)].map((_, key) => (
                         <div key={key} className={`page ${(key + 1) === page ? 'page-active' : ''}`} onClick={() => changePage(key+1)}>{key + 1}</div>
                     ))
                 }

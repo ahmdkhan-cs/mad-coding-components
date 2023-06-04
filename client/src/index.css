@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* BASE STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+/* SUBMIT BUTTON STYLES */
+.btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn:hover{
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.btn-sec{
+    background-color: #9BA4B5;
+}
+
+.btn-sec:hover{
+    background-color: #5d626d;
+    cursor: pointer;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+.error-text{
+    margin: 12px 0px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #CD1818;
+    text-transform: capitalize;
+}
+
+.success-text{
+    margin: 12px 0px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B9C85;
+    text-transform: capitalize;
+}
+
+.d-none{
+    display: none;
+}

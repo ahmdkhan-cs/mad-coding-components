@@ -1,24 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-
 :root{
     --primary-color: #614093;
     --accent-color: #9BA4B5;
     --white-color: #ffffff;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    width: 100vw;
-    height: 100vh;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-
 }
 
 .container-table{

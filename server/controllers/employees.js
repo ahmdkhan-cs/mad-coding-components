@@ -19,6 +19,29 @@ const getEmployees = async (req, res) => {
     }
 }
 
+const saveEmployee = async (req, res) => {
+    try{
+        const {name, email, age, city, salary, department, hireDate, phone, address, manager} = req.body;
+        const employee = new Employee({
+            name,
+            email,
+            age,
+            city,
+            salary,
+            department,
+            hireDate,
+            phone,
+            address,
+            manager
+        });
+
+        await employee.save();
+        res.send("Employee created!");
+    }catch(err){
+        res.status(404).json({error: err.message});
+    }
+}
+
 const addFakeEmployees = async () => {
     try{
         for(let i = 0; i < 100; i++){
@@ -45,5 +68,6 @@ const addFakeEmployees = async () => {
 
 module.exports = {
     getEmployees,
+    saveEmployee,
     addFakeEmployees
 };
